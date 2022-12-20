@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- heade -->
+<!-- head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <!-- title -->
     <title>LARAVEL</title>
     <!-- /title -->
-    
+
 </head>
 <!-- /head -->
 
@@ -23,10 +23,25 @@
 
     <!-- header section -->
     <header>
-        <!-- print the content of the variable -->
-        <h1>{{ $header }}</h1>
+        <!-- links list -->
+        <ul>
+            <!-- dynamic links section -->
+            @foreach ($links as $link)
+                <li>
+                    <a href="{{ route($link['href']) }}"> {{ $link['text'] }} </a>
+                </li>
+            @endforeach
+            <!-- /dynakic link section -->
+        </ul>
+        <!-- /links list -->
     </header>
     <!-- /header section -->
+
+    <!-- main section -->
+    <main>
+        <h1>{{ $home_content }}</h1>
+    </main>
+    <!-- /main section -->
 
 </body>
 <!-- /body -->
