@@ -19,5 +19,12 @@ Route::get('/home', function () {
     $header = "Hello World!!! I am a header";
     // compact to show the content
     return view('home', compact("header"));
+    
+    // associative array
+    // $data = [
+    //     "header" => "Hello World!!! I am a header"
+    // ];
+    // return view('home', $data);
+
 })->name("home");
 ?> 
