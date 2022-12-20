@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// home route
+Route::get('/home', function () {
+    // set variable
+    $header = "Hello World!!! I am a header";
+    // compact to show the content
+    return view('home', compact("header"));
+})->name("home");
+?> 
